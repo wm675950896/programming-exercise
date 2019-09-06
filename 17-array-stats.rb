@@ -13,8 +13,22 @@ while (true)
 end
 
 puts arr.to_s
+c = 0
+arr.each do |x|
+			c = c +x 
+			end
+ava = c/arr.size
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+a = arr[0]
+(1..arr.size-1).each do |x|
+	a = arr[x] > a ? a : arr[x]
+end
+
+b = arr[0]
+(1..arr.size-1).each do |x|
+	b = arr[x] > b ? arr[x] : b
+end
+puts "总和是 __#{c}___"
+puts "平均是 __#{ava}___"
+puts "最大值是 _#{b}____"
+puts "最小值是 _#{a}____"

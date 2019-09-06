@@ -3,8 +3,13 @@
 def count(arr)
   h = {}
 
+  arr1 = arr.uniq
   arr.each do |i|
-    # ...
+    if h[i].nil?
+		h[i] = 1
+	else
+		h[i] = 1 + h[i].to_i
+	end
   end
 
   return h # 回传一个 hash
